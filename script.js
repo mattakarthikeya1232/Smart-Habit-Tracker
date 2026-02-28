@@ -293,8 +293,8 @@ document.getElementById('saveRemindersBtn')
 
 /* --------------- Cam Acess Buttons ----------*/
 
-const stopBtn=document.getElementById('stopCamBtn');
-if(stopBtn) stopBtn.addEventListener('click', ()=>stopCamera());
+const stopBtn = document.getElementById('stopCamBtn');
+if (stopBtn) stopBtn.addEventListener('click', () => stopCamera());
 
-const startBtn=document.getElementById('startCamBtn');
-if(startBtn) startBtn.addEventListener('click', ()=>startCamera());
+const startBtn = document.getElementById('startCamBtn');
+if (startBtn) startBtn.addEventListener('click', () => startCamera());
