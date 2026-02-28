@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Task Reminder App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="camera-section hidden" id="cameraSection">
+      <video id="video" autoplay muted playsinline></video>
+      <div class="cam-info">
+        <div class="emotion-label">Emotion</div>
+        <div id="emotionText" class="emotion-value">—</div>
+        <div id="jokeBox" class="joke-box">Friendly message appears here when camera runs</div>
+        <div class="cam-buttons">
+          <button id="startCamBtn" class="btn">Start Camera</button>
+          <button id="stopCamBtn" class="btn ghost">Turn Camera Off</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-card">
+      <h2>Welcome!</h2>
+      <label for="language">Choose Language</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+        <option value="ta">Tamil</option>
+      </select>
+
+      <h3>Choose Task Type</h3>
+      <div class="row">
+        <button onclick="chooseTask('daily')" class="btn">Daily Task</button>
+        <button onclick="chooseTask('oneDay')" class="btn">One Day Task</button>
+        <button onclick="chooseTask('selectiveDays')" class="btn">Selective Days</button>
+      </div>
+
+      <div id="calendarBlock" class="card hidden">
+        <h4>Select dates for task</h4>
+        <input type="date" id="dateInput">
+        <button onclick="addDate()" class="btn ghost">Add Date</button>
+        <ul id="datesList"></ul>
+      </div>
+
+      <div id="timersBlock" class="card hidden">
+        <h4>Set Reminders (start/end)</h4>
+        <label>Start time</label>
+        <input type="time" id="startTime">
+        <label>End time</label>
+        <input type="time" id="endTime">
+        <div class="row">
+          <button id="saveRemindersBtn" class="btn">Save & Schedule</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="scheduledCard" class="scheduled-card hidden">
+      <h4>Scheduled Reminders</h4>
+      <ul id="scheduledUl"></ul>
+    </div>
+
+    <audio id="ding" src="ding.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="face-api.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
