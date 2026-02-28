@@ -25,12 +25,13 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+  min-height:100vh;
+  padding:40px 20px;
   position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start; /* 👈 anchor to top */
+  overflow-y:auto;
 }
 
 body::before{
@@ -58,6 +59,7 @@ body::before{
   gap:var(--gap);
   align-items:stretch;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 /* ---------------- CAMERA SECTION ---------------- */
